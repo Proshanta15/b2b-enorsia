@@ -19,6 +19,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"
+    />
     <!---- Other Css Link------->
     <link rel="stylesheet" href="./css/magnific-popup.css" />
     <link rel="stylesheet" href="./css/bootstrap5.02_cdn_link.css" />
@@ -31,15 +40,583 @@
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
+    <!-- Header Section -->
+    <header>
+      <div class="page_width">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a id="nav_logo" class="navbar-brand" href="#"
+              ><img src="./images/logo.png" alt="Logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav m-auto" id="nav_list">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Women
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Men
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Girls
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Boys
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li>
+                      <a class="dropdown-item" href="#">Another action</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="" id="nav_user_part">
+                <ul>
+                  <li class="nav_search">
+                    <img src="./images/search.svg" alt="Search" />
+                  </li>
+                  <li class="nav_login">
+                    <a href="">
+                      <img src="./images/user.svg" alt="Login" />
+                    </a>
+                  </li>
+                  <li class="nav-cart-icon" title="Bag" id="bag_toggle_item">
+                    <label
+                      for="cart"
+                      class="position-relative"
+                      id="set-header-cart-data"
+                    >
+                      <div class="position-relative" id="header_cart_bag_img">
+                        <img src="./images/bag.svg" alt="cart" title="cart" />
+                        <span class="small-text cart-count itemCountInCart"
+                          >0</span
+                        >
+                        <div class="cart-container" id="cart_container_body">
+                          <div class="header-1ges7jt"></div>
+                          <div class="cart-details">
+                            <div
+                              class="cart-header d-flex justify-content-between align-items-center py-3 px-3"
+                            >
+                              <p>
+                                <span class="itemCountInCartt">1</span> item in
+                                your bag
+                              </p>
+                              <p class="btn-close"></p>
+                            </div>
+                            <div class="cart-body bg-light px-md-3 px-2">
+                              <div class="py-2 border-top cart-product row">
+                                <div class="col-12 p-1">
+                                  <div class="cart_product_body">
+                                    <div class="cart-product-img"></div>
+                                    <div class="cart-product-details"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="cart-footer"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- End Header Section -->
 
+    <!-- Scroll Test Section -->
+    <div
+      class="verticalflip"
+      style="background-color: rgb(0, 0, 0); color: white"
+    >
+      <div id="verticalflip_body">
+        <p>𝐅𝐫𝐞𝐞 𝐃𝐞𝐥𝐢𝐯𝐞𝐫𝐲 𝐨𝐧 𝐀𝐥𝐥 𝐏𝐫𝐨𝐝𝐮𝐜𝐭𝐬</p>
+        <p>𝐅𝐚𝐬𝐭𝐞𝐬𝐭 𝐃𝐞𝐥𝐢𝐯𝐞𝐫𝐲 𝐅𝐫𝐨𝐦 𝐖𝐚𝐫𝐞𝐡𝐨𝐮𝐬𝐞</p>
+        <p>
+          𝗚𝗲𝘁 𝗢𝘂𝗿 𝗣𝗿𝗼𝗱𝘂𝗰𝘁𝘀 𝗼𝗻 𝗨𝗞
+          <span
+            ><a
+              href="https://www.debenhams.com/search?text=enorsia"
+              target="blank"
+            >
+              𝗗𝗲𝗯𝗲𝗻𝗵𝗮𝗺𝘀</a
+            > </span
+          >,
+          <span
+            ><a
+              href="https://www.amazon.co.uk/stores/Enorsia/page/EED2B82A-9D44-48ED-8B18-68C70E51271B?ref_=ast_bln"
+              target="blank"
+              >𝗔𝗺𝗮𝘇𝗼𝗻</a
+            ></span
+          >
+          &
+          <span
+            ><a
+              href="https://www.spartoo.co.uk//Enorsia-b88858.php#rst"
+              target="blank"
+              >𝐒𝐩𝐚𝐫𝐭𝐨𝐨</a
+            ></span
+          >
+        </p>
+      </div>
+    </div>
+    <!-- End Scroll Test Section -->
 
-    <h1>B2B</h1>
+    <!-- Slider Section -->
+    <div class="slider stick-dots">
+      <div class="slide">
+        <div class="slide__img">
+          <img
+            src="./images/background.jpg"
+            alt=""
+            data-lazy="./images/background.jpg"
+            class="full-image animated"
+            data-animation-in="zoomInImage"
+          />
+        </div>
+        <div class="slide__content">
+          <div class="slide__content--headings">
+            <h2 class="animated" data-animation-in="fadeInUp">
+              Slide me to the moon
+            </h2>
+            <p
+              class="animated slider_sm_text"
+              data-animation-in="fadeInUp"
+              data-delay-in="0.3"
+            >
+              With awesome animations
+            </p>
+            <a
+              class="animated slider_btn"
+              data-animation-in="fadeInUp"
+              data-delay-in="0.5"
+              href=""
+              >stock now</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="slide__img">
+          <img
+            src="./images/Banne-New.jpg"
+            alt=""
+            data-lazy="./images/Banne-New.jpg"
+            class="full-image animated"
+            data-animation-in="zoomInImage"
+          />
+        </div>
+        <div class="slide__content">
+          <div class="slide__content--headings">
+            <h2 class="animated" data-animation-in="fadeInRight">
+              Slide me to the moon
+            </h2>
+            <p
+              class="animated slider_sm_text"
+              data-animation-in="fadeInRight"
+              data-delay-in="0.2"
+            >
+              With awesome animations
+            </p>
+            <a
+              class="animated slider_btn"
+              data-animation-in="fadeInRight"
+              data-delay-in="0.5"
+              href=""
+              >stock now</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Slider Section -->
+
+    <!-- Brand Animate Section -->
+    <section class="brand_animate_sec">
+      <div class="brand_top">
+        <p class="bold_title brand_title">
+          UK’s Leading Women’s Clothing Wholesale Marketplace - Supplier!
+        </p>
+        <p class="sm_title range">
+          Collection range from A-Z, we’ve got it all!
+        </p>
+        <p class="sm_title">
+          Over <span class="bold_title">30,000</span> retailers and online
+          stores trust <a class="brand_link" href=""> JQ Wholesale,</a> with
+          <span class="bold_title">38,500+ boxes delivered</span> across the UK
+          and EU in the last year alone.
+        </p>
+        <p class="sm_title">
+          Customize your orders with
+          <span class="bold_title">flexible sizing or packs</span> —only buy
+          what sells in your store.
+        </p>
+        <p class="sm_title">Your one-stop shop for all your wholesale needs!</p>
+      </div>
+      <div class="brand_body">
+        <div class="all_cat_slider_body">
+          <div class="common_list_body" id="brands_lists">
+            <div class="wrapper">
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/accord.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/amfori.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/bhive.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/detox.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/EN-PK.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/EN-UK.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/enosia_logo.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PAKIZA.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-BD.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-CN.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-GLOBAL.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-GM.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/accord.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/amfori.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/bhive.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/detox.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+              <!-- Duplicate -->
+               <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/accord.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/amfori.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/bhive.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/detox.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/EN-PK.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/EN-UK.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/enosia_logo.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PAKIZA.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-BD.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-CN.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-GLOBAL.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/PFD-GM.jpg" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/accord.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/amfori.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/bhive.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+
+              <div class="category_item">
+                <a href="">
+                  <img src="./images/logo/detox.png" class="" alt="brand" title="brand" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Brand Animate Section -->
+
+    <!-- Shop Category Section -->
+     <section class="shop_category_sec">
+      <div class="page_width">
+        <div class="shop_category_title_part">
+          <h1 class="shop_category_title">
+            Shop by category
+          </h1>
+        </div>
+        <div class="shop_category_body">
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Fit.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Slim Fit</p>
+              </div>
+            </a>
+          </div>
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Jeans.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Skinny Jeans</p>
+              </div>
+            </a>
+          </div>
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Jersey.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Jersey</p>
+              </div>
+            </a>
+          </div>
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Neck.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Ribbed Roll Neck</p>
+              </div>
+            </a>
+          </div>
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Shine.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Rise And Shine</p>
+              </div>
+            </a>
+          </div>
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Skinny-Jeans.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Skinny Jeans</p>
+              </div>
+            </a>
+          </div>
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Top.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Top</p>
+              </div>
+            </a>
+          </div>
+          <div class="shop_category_item">
+            <a href="">
+              <img src="./images/category/Zip.jpg" alt="">
+              <div class="shop_category_item_title_part">
+                <p class="shop_category_item_title">Fleece Zip</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+     </section>
+    <!-- End Shop Category Section -->
+
     <!-- Jquery Link ---->
     <script src="./js/jQuery_v3.7.1.js"></script>
     <!-- Bootstrap Bundle Js Link------>
     <script src="./js/bootstrap5.02_bundle_cdn_link.js"></script>
 
     <!---- Other Js Link ------>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+    <script src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
 
     <script src="./js/jquery.magnific-popup.min.js"></script>
     <script src="./js/owl.carousel.min.js"></script>
