@@ -1,5 +1,4 @@
-
-// Cart toggle js code 
+// Cart toggle js code
 
 document.addEventListener("DOMContentLoaded", function () {
   const cartButton = document.getElementById("header_cart_bag_img");
@@ -25,97 +24,113 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
 // Slider part js code
-$('.slider').slick({
-  autoplay: true,
-  speed: 2000,
-  lazyLoad: 'progressive',
-  arrows: false,
-  dots: true,
-}).slickAnimation();
+$(".slider")
+  .slick({
+    autoplay: true,
+    speed: 2000,
+    lazyLoad: "progressive",
+    arrows: false,
+    dots: true,
+  })
+  .slickAnimation();
 
 // Client Slider
-$(document).ready(function(){
-  $('.carousel').slick({
+$(document).ready(function () {
+  $(".carousel").slick({
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 6000,
-    dots:true,
+    dots: true,
     centerMode: true,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        // centerMode: true,
-      }
-
-    }, {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: true,
-        infinite: true,
-      }
-    },  {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      }
-    }]
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          // centerMode: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
   });
 });
 
 // Sale Brand Slider
-$(document).ready(function(){
-  $('.sale_brand_carousel').slick({
+$(document).ready(function () {
+  $(".sale_brand_carousel").slick({
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    dots:true,
+    dots: true,
     centerMode: true,
-    responsive: [{
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        // centerMode: true,
-      }
-
-    }, {
-      breakpoint: 800,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: true,
-        infinite: true,
-      }
-    },  {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true,
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      }
-    }]
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          // centerMode: true,
+        },
+      },
+      {
+        breakpoint: 1400,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          dots: true,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          dots: true,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+        },
+      },
+    ],
   });
 });
 
-//Top Item section js code 
+//Top Item section js code
 document.addEventListener("DOMContentLoaded", () => {
   const mainImg = document.getElementById("mainImage");
   const thumbs = document.querySelectorAll(".top_item_img_sm ul li img");
@@ -128,14 +143,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentIndex = 0;
   let isZoomed = false;
-  const images = Array.from(thumbs).map(img => img.src);
+  const images = Array.from(thumbs).map((img) => img.src);
 
   // === Thumbnail click ===
   thumbs.forEach((thumb, index) => {
     if (index === 0) thumb.parentElement.classList.add("active");
     thumb.addEventListener("click", () => {
       mainImg.src = thumb.src;
-      thumbs.forEach(t => t.parentElement.classList.remove("active"));
+      thumbs.forEach((t) => t.parentElement.classList.remove("active"));
       thumb.parentElement.classList.add("active");
       currentIndex = index;
     });
@@ -173,7 +188,9 @@ document.addEventListener("DOMContentLoaded", () => {
     currentIndex = (currentIndex + direction + images.length) % images.length;
     modalImg.src = images[currentIndex];
     mainImg.src = images[currentIndex];
-    thumbs.forEach((t, i) => t.parentElement.classList.toggle("active", i === currentIndex));
+    thumbs.forEach((t, i) =>
+      t.parentElement.classList.toggle("active", i === currentIndex)
+    );
     resetZoom();
   }
 
@@ -189,7 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Ensure body scroll is disabled while zoomed
       document.body.style.overflow = "hidden";
-
     } else {
       resetZoom();
     }
@@ -214,49 +230,47 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
-
 // Product Item Js Code
-document.querySelectorAll('.product_item').forEach(product => {
-  const hoverImgs = product.querySelectorAll('.hover_img img');
-  const colorBtns = product.querySelectorAll('.product_color_part ul li a img');
-  const originalImg = product.querySelector('.orginal_img');
-  const originalHover = product.querySelector('.orginal_hover_img');
+document.querySelectorAll(".product_item").forEach((product) => {
+  const hoverImgs = product.querySelectorAll(".hover_img img");
+  const colorBtns = product.querySelectorAll(".product_color_part ul li a img");
+  const originalImg = product.querySelector(".orginal_img");
+  const originalHover = product.querySelector(".orginal_hover_img");
 
   // Product hover → show main hover image
-  product.addEventListener('mouseenter', () => {
+  product.addEventListener("mouseenter", () => {
     originalImg.style.opacity = 0;
     originalHover.style.opacity = 1;
   });
 
-  product.addEventListener('mouseleave', () => {
+  product.addEventListener("mouseleave", () => {
     // Reset everything when leaving product
-    hoverImgs.forEach(img => img.classList.remove('active'));
-    colorBtns.forEach(btn => btn.classList.remove('active'));
+    hoverImgs.forEach((img) => img.classList.remove("active"));
+    colorBtns.forEach((btn) => btn.classList.remove("active"));
     originalImg.style.opacity = 1;
     originalHover.style.opacity = 0;
   });
 
   // Hover over color thumbnails
   colorBtns.forEach((btn, index) => {
-    btn.addEventListener('mouseenter', () => {
+    btn.addEventListener("mouseenter", () => {
       // Show corresponding color image
       hoverImgs.forEach((img, i) => {
-        img.classList.toggle('active', i === index);
+        img.classList.toggle("active", i === index);
       });
 
       // Hide main hover image
       originalHover.style.opacity = 0;
 
       // Highlight color
-      colorBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      colorBtns.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
     });
 
-    btn.addEventListener('mouseleave', () => {
+    btn.addEventListener("mouseleave", () => {
       // Remove color preview
-      hoverImgs.forEach(img => img.classList.remove('active'));
-      colorBtns.forEach(b => b.classList.remove('active'));
+      hoverImgs.forEach((img) => img.classList.remove("active"));
+      colorBtns.forEach((b) => b.classList.remove("active"));
 
       // Show the main hover image again
       originalHover.style.opacity = 1;

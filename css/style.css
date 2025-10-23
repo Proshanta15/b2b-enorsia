@@ -63,12 +63,22 @@ header {
   z-index: 11;
   position: relative;
 }
+header .navbar {
+  padding: 0px;
+}
+#nav_logo {
+  padding: 0px;
+}
 #nav_logo img {
   width: 120px;
   height: auto;
 }
 #nav_list .nav-item.dropdown:hover .dropdown-menu {
   display: block;
+}
+#nav_list .nav-item .dropdown-menu li a {
+  font-weight: 300;
+  font-size: 15px;
 }
 #nav_list .nav-item {
   margin: 0px 10px;
@@ -110,8 +120,7 @@ header {
   font-size: 12px;
   color: #627786;
 }
-.small-text {
-}
+
 .cart-count {
   cursor: pointer;
   font-style: normal;
@@ -260,11 +269,9 @@ header {
 /******** End Scoll text section **********/
 
 /******* Slider Section ***********/
-
-
 .slide {
   position: relative;
-  max-height: 88vh;
+  max-height: 90vh;
 }
 .slide .slide__img {
   width: 100%;
@@ -876,7 +883,7 @@ header {
   color: #242424;
   margin-bottom: 20px;
 }
-.top_item_btn{
+.top_item_btn {
   background: #000;
   text-align: center;
   display: block;
@@ -885,55 +892,55 @@ header {
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 1.3px;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
   margin-bottom: 20px;
 }
-.top_item_btn span{
+.top_item_btn span {
   text-decoration: underline;
 }
-.top_item_btn:hover{
+.top_item_btn:hover {
   color: #fff;
   background: #303030;
-  transition: .2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
-.top_item_stock_title{
+.top_item_stock_title {
   text-align: center;
   margin-bottom: 20px;
   font-size: 18px;
   text-transform: uppercase;
   color: #000;
 }
-.top_item_details_txt{
+.top_item_details_txt {
   font-size: 16px;
   font-weight: 300;
   line-height: 28px;
   text-align: justify;
 }
-.top_item_others{
+.top_item_others {
   margin-top: 30px;
 }
-.top_item_others ul li{
+.top_item_others ul li {
   margin-bottom: 15px;
 }
-.top_item_others ul li p .top_item_others_title{
+.top_item_others ul li p .top_item_others_title {
   font-size: 16px;
   font-weight: 500;
 }
-.top_item_others ul li p{
+.top_item_others ul li p {
   font-size: 16px;
   font-weight: 300;
 }
-.top_item_size_part{
+.top_item_size_part {
   margin-top: 20px;
 }
-.top_item_size_text{
+.top_item_size_text {
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 1.5px;
   font-size: 17px;
   margin-bottom: 5px;
 }
-.top_item_size_box_txt{
+.top_item_size_box_txt {
   border: 2px solid #000;
   font-size: 18px;
   padding: 7px 20px;
@@ -1555,12 +1562,92 @@ header {
 }
 /******** End Footer Section **********/
 
-
-
 /********************************************************************************************************* Responsive ***************************************/
 
-@media(max-width: 1500px){
-  .page_width{
+@media (max-width: 1500px) {
+  .page_width {
     padding: 0px 20px;
   }
+  .brand_top {
+    margin: 50px 0px;
+  }
+  .brand_body {
+    margin-bottom: 50px;
+  }
+  #brands_lists {
+    --slide-width: clamp(100px, 12vw, 400px);
+  }
+  .shop_category_sec {
+    margin-bottom: 50px;
+  }
+  #text_category_lists .category_item {
+    text-align: center;
+  }
+  .top_item_details_body {
+    padding-left: 50px;
+  }
+  .client_comment_sec {
+    padding: 50px 0px 100px 0px;
+  }
+  .wrapper_slider .slick-list {
+    padding: 0px 30px !important;
+  }
+  .product_section {
+    margin: 50px 0px;
+  }
+  .product_body {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .choose_section {
+    margin: 50px 0px;
+  }
+  .choose_items_part {
+    grid-gap: 30px;
+  }
+  .share_section {
+    margin: 80px 0px 50px 0px;
+  }
+  .blog_section {
+    margin: 50px 0px;
+  }
+  .footer_section {
+    padding: 50px 0px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #brands_lists {
+    --slide-width: clamp(100px, 17vw, 400px);
+  }
+  .shop_category_body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .top_item_left {
+    width: 50%;
+  }
+  .top_item_right {
+    width: 50%;
+  }
+  #text_category_lists {
+    --slide-width: clamp(100px, 20vw, 400px);
+  }
+  .top_item_details_body {
+    padding-left: 25px;
+  }
+  .product_body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer_same {
+    width: 30%;
+  }
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 575px) {
+}
+@media (max-width: 320px) {
 }
