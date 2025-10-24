@@ -57,7 +57,7 @@ input[type="number"] {
 
 /********* Header Section ***********/
 header {
-  padding: 5px 0px;
+  padding: 10px 0px;
   border-bottom: 1px solid #ddd;
   background: #fff;
   z-index: 11;
@@ -229,7 +229,7 @@ header .navbar {
 /******** Scoll text section **********/
 .verticalflip {
   text-align: center !important;
-  height: 32px;
+  height: 35px;
 }
 #verticalflip_body {
   text-align: center;
@@ -1750,24 +1750,31 @@ header .navbar {
     position: absolute;
     background: #fff;
     left: -20px;
-    top: 0;
+    top: -10px;
     max-width: 350px;
     width: 350px;
     height: 100vh;
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
     z-index: 1050;
     transition: transform 0.3s ease;
   }
   .menu-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.28s ease, visibility 0s linear 0.28s;
     z-index: 1040;
   }
-  
+  #navbar_close {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0px 0px 10px 0px;
+  }
+  #navbar_close i {
+    font-size: 30px;
+  }
 
   /* when bootstrap adds .show to .navbar-collapse, overlay becomes visible */
   .navbar-collapse.show ~ .menu-overlay {
@@ -1786,6 +1793,11 @@ header .navbar {
     margin-top: 20px;
   }
   /*******************/
+  #nav_user_part {
+    position: absolute;
+    right: 81px;
+    top: -7px;
+  }
   .slide .slide__content--headings h2 {
     font-size: 25px;
   }
