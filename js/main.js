@@ -1,3 +1,30 @@
+
+document.addEventListener('DOMContentLoaded', function () {
+  const collapseEl = document.getElementById('navbarSupportedContent');
+  const overlay = document.getElementById('menuOverlay');
+
+  if (!collapseEl || !overlay) return;
+
+  collapseEl.addEventListener('show.bs.collapse', () => {
+    overlay.classList.add('active');
+    // optional: prevent body scroll
+    document.body.style.overflow = 'hidden';
+  });
+
+  collapseEl.addEventListener('hide.bs.collapse', () => {
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  // click overlay to close the collapse
+  overlay.addEventListener('click', () => {
+    const bsCollapse = bootstrap.Collapse.getInstance(collapseEl) ||
+                       new bootstrap.Collapse(collapseEl, {toggle: false});
+    bsCollapse.hide();
+  });
+});
+
+
 // Cart toggle js code
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Slider part js code
 $(".slider")
   .slick({
-    autoplay: true,
+    autoplay: false,
     speed: 2000,
     lazyLoad: "progressive",
     arrows: false,
@@ -57,8 +84,8 @@ $(document).ready(function () {
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           dots: true,
           infinite: true,
         },
@@ -109,7 +136,7 @@ $(document).ready(function () {
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           slidesToScroll: 2,
           dots: true,
           infinite: true,
@@ -118,7 +145,7 @@ $(document).ready(function () {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           dots: true,
           infinite: true,
