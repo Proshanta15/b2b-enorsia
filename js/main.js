@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Slider part js code
 $(".slider")
   .slick({
-    autoplay: false,
+    autoplay: true,
     speed: 2000,
     lazyLoad: "progressive",
     arrows: false,
