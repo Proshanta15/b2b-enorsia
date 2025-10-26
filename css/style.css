@@ -19,6 +19,7 @@ li {
 a {
   text-decoration: none;
   padding: 0px;
+  color: #000;
 }
 h1,
 h2,
@@ -55,9 +56,40 @@ input[type="number"] {
 }
 /********** End Common Css **********/
 
+/******** Header Top Section *******/
+.header_top_section {
+  background: #523328;
+  color: #f5e6dc;
+}
+.header_top_body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 0px;
+}
+.header_top_text {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.header_top_btn {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 1.3px;
+  color: #f5e6dc;
+}
+.header_top_btn:hover {
+  color: #fff;
+}
+/******** End Header Top Section *******/
+
 /********* Header Section ***********/
 header {
-  padding: 10px 0px;
   border-bottom: 1px solid #ddd;
   background: #fff;
   z-index: 11;
@@ -105,7 +137,7 @@ header .navbar {
 }
 
 .nav-link.dropdown-toggle::after {
-  display: none !important; /* hide default caret */
+  display: none !important;
 }
 
 .nav-link.dropdown-toggle .bi {
@@ -114,20 +146,91 @@ header .navbar {
   font-size: 14px;
   margin-left: 10px !important;
 }
-
+#nav_list {
+  gap: 15px;
+}
 #nav_list .nav-item.dropdown:hover .bi {
   transform: rotate(180deg);
 }
-
+#nav_list .dropdown-menu {
+  width: 1100px;
+  background: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 161px;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 0px;
+  border: 1px solid #ddd;
+  border-radius: 0px;
+}
 #nav_list .nav-item.dropdown:hover .dropdown-menu {
   display: block;
+  border: none;
+  border: 1px solid #ddd;
+}
+.menu_body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu_left {
+  display: flex;
+  flex-direction: row;
+  width: 40%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.menu_left_top,
+.menu_custom_items {
+  margin-bottom: 20px;
+}
+.menu_items ul li {
+  margin: 3px 0px;
+}
+.menu_items ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.menu_item_title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 5px 0;
 }
 #nav_list .nav-item .dropdown-menu li a {
   font-weight: 300;
   font-size: 15px;
 }
+.menu_right {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 50px;
+  gap: 25px;
+}
+.menu_right_item {
+  width: 50%;
+}
+.menu_item_img {
+  margin-bottom: 20px;
+}
+.menu_item_img img {
+  width: 100%;
+  height: auto;
+}
+.menu_simple_txt {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 10px 0px 20px 0px;
+}
 #nav_list .nav-item {
-  margin: 0px 10px;
+  height: 82px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #nav_list li a {
   color: #000;
@@ -244,6 +347,7 @@ header .navbar {
   animation: vertical 15s linear infinite;
   position: absolute;
   opacity: 0;
+  font-size: 16px;
 }
 .verticalflip p span a {
   color: #dcb403;
@@ -372,7 +476,7 @@ header .navbar {
 .slide .slide__content--headings h2 {
   font-size: 50px;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300;
   margin: 10px 0;
   letter-spacing: 1.5px;
 }
@@ -397,7 +501,7 @@ header .navbar {
 }
 .slick-dots {
   position: absolute;
-  bottom: 25px;
+  bottom: -4px;
   list-style: none;
   display: block;
   text-align: center;
@@ -444,18 +548,18 @@ header .navbar {
 }
 .simple-dots .slick-dots li.slick-active button {
   color: white;
-  opacity: 0.75;
+  opacity: 1;
 }
 .stick-dots .slick-dots li {
-  height: 3px;
-  width: 50px;
+  height: 7px;
+  width: 110px;
 }
 .stick-dots .slick-dots li button {
   position: relative;
   background-color: white;
   opacity: 0.25;
-  width: 50px;
-  height: 3px;
+  width: 110px;
+  height: 7px;
   padding: 0;
 }
 .stick-dots .slick-dots li button:hover,
@@ -1633,6 +1737,21 @@ header .navbar {
   .page_width {
     padding: 0px 20px;
   }
+  .header_top_text {
+    font-size: 25px;
+  }
+  .header_top_body {
+    padding: 10px 0px;
+  }
+  .header_top_btn {
+    font-size: 18px;
+  }
+  #nav_list .dropdown-menu {
+    top: 128px;
+  }
+  #nav_list .nav-item {
+    height: 70px;
+  }
   .brand_top {
     margin: 50px 0px;
   }
@@ -1655,7 +1774,7 @@ header .navbar {
     padding: 50px 0px 100px 0px;
   }
   .wrapper_slider .slick-list {
-    padding: 0px 30px !important;
+    padding: 0px 0px !important;
   }
   .product_section {
     margin: 50px 0px;
@@ -1681,6 +1800,28 @@ header .navbar {
 }
 
 @media (max-width: 1200px) {
+  .header_top_text {
+    font-size: 20px;
+  }
+  .header_top_btn {
+    font-size: 14px;
+  }
+  .header_top_body {
+    padding: 6px 0px;
+  }
+  .header_top_text {
+    font-size: 23px;
+  }
+  #nav_list .dropdown-menu {
+    top: 117px;
+  }
+  .header_top_btn {
+    font-size: 16px;
+  }
+  #nav_list .dropdown-menu {
+    width: 950px;
+    padding: 15px;
+  }
   .slide .slide__content--headings h2 {
     font-size: 35px;
   }
@@ -1746,17 +1887,36 @@ header .navbar {
 @media (max-width: 1024px) {
 }
 @media (max-width: 991px) {
+  .header_top_text {
+    font-size: 15px;
+  }
+  .header_top_btn {
+    font-size: 13px;
+  }
+  .header_top_body {
+    padding: 5px 0px;
+  }
   .navbar-collapse {
     position: absolute;
     background: #fff;
     left: -20px;
-    top: -10px;
-    max-width: 350px;
-    width: 350px;
+    top: -35px;
+    max-width: 500px;
+    width: 500px;
     height: 100vh;
     padding: 10px 20px 20px 20px;
     z-index: 1050;
     transition: transform 0.3s ease;
+  }
+  #nav_list {
+    gap: 0px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #nav_list .nav-item {
+    height: 50px;
+    width: 100%;
+    justify-content: flex-start;
   }
   .menu-overlay {
     position: fixed;
@@ -1775,6 +1935,27 @@ header .navbar {
   #navbar_close i {
     font-size: 30px;
   }
+  #nav_list .dropdown-menu {
+    display: none;
+    width: 100%;
+    padding: 15px;
+    left: 0;
+    transform: none;
+    position: absolute;
+    top: 50px;
+    border: none;
+  }
+  .menu_body {
+    width: 100%;
+    flex-direction: column;
+  }
+  .menu_left {
+    width: 100%;
+  }
+  .menu_right {
+    display: none;
+  }
+ 
 
   /* when bootstrap adds .show to .navbar-collapse, overlay becomes visible */
   .navbar-collapse.show ~ .menu-overlay {
@@ -1786,6 +1967,8 @@ header .navbar {
   #nav_list .dropdown-toggle {
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    padding: 0px 13px 0px 0px;
   }
   #nav_user_part ul {
     display: flex;
@@ -1797,6 +1980,9 @@ header .navbar {
     position: absolute;
     right: 81px;
     top: -7px;
+  }
+  .verticalflip {
+    height: 30px;
   }
   .slide .slide__content--headings h2 {
     font-size: 25px;
@@ -2052,15 +2238,52 @@ header .navbar {
   .footer_top {
     flex-wrap: wrap;
     padding: 0px 10px;
+    gap: 15px;
+    justify-content: space-between;
   }
   .footer_same {
-    width: 50%;
+    width: 47%;
   }
   .footer_sign_part {
     margin: 20px 0px;
   }
 }
 @media (max-width: 575px) {
+  .header_top_section {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+}
+.header_top_body {
+    padding: 4px 0px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.header_top_text {
+    font-size: 12px;
+}
+#nav_user_part ul {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+#nav_list .dropdown-menu {
+    height: 70vh;
+    overflow-y: auto;
+}
+.header_top_btn {
+    font-size: 11px;
+}
+  .navbar-collapse {
+    position: absolute;
+    background: #fff;
+    left: -9px;
+    top: -35px;
+    max-width: 106%;
+    width: 106%;
+    padding: 10px 20px 20px 20px;
+}
   #nav_logo img {
     width: 80px;
   }
@@ -2084,6 +2307,23 @@ header .navbar {
   }
   .top_item_left {
     width: 100%;
+  }
+  .modal-img-container {
+    width: 75%;
+  }
+  .modal-img-container.zoomed-container {
+    width: 90%;
+  }
+  .image-modal .modal-img.zoomed {
+    transform: scale(1.4);
+    top: 0%;
+  }
+
+  .image-modal .arrow.right {
+    right: 5px;
+  }
+  .image-modal .arrow.left {
+    left: 5px;
   }
   .top_item_body {
     gap: 10px;

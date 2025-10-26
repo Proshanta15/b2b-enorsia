@@ -1,4 +1,55 @@
+// Default Click off js code for dropdown menu
+document.querySelectorAll('#nav_list .nav-item.dropdown').forEach(item => {
+  const menu = item.querySelector('.dropdown-menu');
 
+  // Desktop hover behavior
+  item.addEventListener('mouseenter', () => {
+    if (window.innerWidth > 991) {
+      menu.classList.add('show');
+    }
+  });
+
+  item.addEventListener('mouseleave', () => {
+    if (window.innerWidth > 991) {
+      menu.classList.remove('show');
+    }
+  });
+
+  // Mobile click toggle
+  item.addEventListener('click', (e) => {
+    if (window.innerWidth <= 991) {
+      e.preventDefault(); // prevent link jump if <a> exists
+      e.stopPropagation(); // prevent closing immediately
+
+      // toggle dropdown
+      const isOpen = menu.classList.contains('show');
+      document.querySelectorAll('#nav_list .dropdown-menu.show').forEach(openMenu => {
+        openMenu.classList.remove('show'); // close other open dropdowns
+      });
+
+      if (!isOpen) {
+        menu.classList.add('show');
+      }
+    }
+  });
+});
+
+// Close dropdown when clicking outside (mobile only)
+document.addEventListener('click', (e) => {
+  if (window.innerWidth <= 991) {
+    const isDropdown = e.target.closest('#nav_list .nav-item.dropdown');
+    if (!isDropdown) {
+      document.querySelectorAll('#nav_list .dropdown-menu.show').forEach(menu => {
+        menu.classList.remove('show');
+      });
+    }
+  }
+});
+
+
+
+
+//Phone view overlay and close js code
 document.addEventListener('DOMContentLoaded', function () {
   const collapseEl = document.getElementById('navbarSupportedContent');
   const overlay = document.getElementById('menuOverlay');
