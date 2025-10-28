@@ -101,6 +101,9 @@ header .navbar {
 #nav_logo {
   padding: 0px;
 }
+header .navbar-collapse{
+  position: relative;
+}
 #nav_logo img {
   width: 120px;
   height: auto;
@@ -153,11 +156,11 @@ header .navbar {
   transform: rotate(180deg);
 }
 #nav_list .dropdown-menu {
-  width: 1100px;
+  width: 100%;
   background: #fff;
   padding: 20px;
-  position: fixed;
-  top: 161px;
+  position: absolute;
+  top: 82px;
   left: 50%;
   transform: translate(-50%);
   margin-top: 0px;
@@ -170,10 +173,11 @@ header .navbar {
   border: 1px solid #ddd;
 }
 .menu_body {
-  width: 100%;
+  width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .menu_left {
   display: flex;
@@ -208,7 +212,7 @@ header .navbar {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding-left: 50px;
+  padding-left: 100px;
   gap: 25px;
 }
 .menu_right_item {
@@ -231,6 +235,7 @@ header .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: static;
 }
 #nav_list li a {
   color: #000;
@@ -347,7 +352,7 @@ header .navbar {
   animation: vertical 15s linear infinite;
   position: absolute;
   opacity: 0;
-  font-size: 16px;
+  font-size: 15px;
 }
 .verticalflip p span a {
   color: #dcb403;
@@ -450,7 +455,7 @@ header .navbar {
   bottom: 0;
   content: "";
   left: 0;
-  opacity: 0.2;
+  opacity: 0.3;
   position: absolute;
   right: 0;
   top: 0;
@@ -474,10 +479,16 @@ header .navbar {
   color: #fff;
 }
 .slide .slide__content--headings h2 {
-  font-size: 50px;
+  font-size: 40px;
   text-transform: uppercase;
   font-weight: 300;
-  margin: 10px 0;
+  margin: 0px 0px 10px 0;
+}
+.slider_sm_top_text{
+   text-transform: uppercase;
+  font-size: 20px;
+  margin-bottom: 0px;
+  font-weight: 200;
   letter-spacing: 1.5px;
 }
 .slider_sm_text {
@@ -1583,7 +1594,7 @@ header .navbar {
 /******** Footer Section **********/
 .footer_section {
   border-top: 1px solid #cecece;
-  padding: 70px 0px;
+  padding: 70px 0px 20px 0px;
 }
 .footer_top {
   display: flex;
